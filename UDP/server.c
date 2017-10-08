@@ -41,7 +41,7 @@ int size=sizeof(struct sockaddr);
 recvbytes=recvfrom(sockid,msg,sizeof(msg),0,(struct sockaddr*)&dummy,&size);
 msg[recvbytes]='\0';
 printf("\nMessage From Client : %s ",msg);
-printf("\nENter Message to send : ");
+printf("\nEnter Message to send : ");
 gets(repmsg);
 sentbytes=sendto(sockid,repmsg,strlen(repmsg),0,(struct sockaddr*)&dummy,size);
 }

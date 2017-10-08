@@ -33,7 +33,7 @@ for(j=1;j<=5;j++)
 {
 char msg[100],repmsg[100];
 int size=sizeof(struct sockaddr);
-printf("\nENter Message to send : ");
+printf("\nEnter Message to send : ");
 gets(repmsg);
 sentbytes=sendto(sockid,repmsg,strlen(repmsg),0,(struct sockaddr*)&client,size);
 recvbytes=recvfrom(sockid,msg,sizeof(msg),0,NULL,NULL);

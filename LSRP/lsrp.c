@@ -5,13 +5,13 @@ void djikstra(int g[max][max],int n,int startnode);
 int main()
 {
         int g[max][max],i,j,n,u;
-        printf("\n enter no. of nodes");
+        printf("\nEnter no. of nodes : ");
         scanf("%d",&n);
-        printf("\n enter the cost matrix");
+        printf("\nEnter the cost matrix\n");
         for(i=0;i<n;i++)
                 for(j=0;j<n;j++)
                         scanf("%d",&g[i][j]);
-        printf("\n enter rhe starting node");
+        printf("\nEnter the starting node : ");
         scanf("%d",&u);
         djikstra(g,n,u);
         return 0;
@@ -55,20 +55,23 @@ void djikstra(int g[max][max],int n,int startnode)
                                 {
                                         distance[i]=mindist+cost[nextnode][i];
                                         pred[i]=nextnode;
-                                }}
+                                }
+			}
                         count++;
                 }
                 for(i=0;i<n;i++)
                         if(i!=startnode)
                         {
-                                printf("\n dist of %d from %d =%d",i,startnode,distance[i]);
-                                printf("\n path:\n");
-   printf("%d",i);
+                                printf("\nDistance of %d from %d = %d",i,startnode,distance[i]);
+                                printf("\nPath :\n");
+   				printf("%d",i);
                                 j=i;
                                 do{
                                         j=pred[j];
-                                        printf(" <- %d",j);
+                                        printf(" <------ %d",j);
                                 }
                                 while(j!=startnode);
-                        }}}
+                        }
+}
+}
                                    
