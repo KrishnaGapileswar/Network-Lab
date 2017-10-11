@@ -73,7 +73,6 @@ client2.sin_zero[i]='\0';
 printf("\nConnected to Authoritative\n");
 sentbytes=sendto(sockid2,hostname,strlen(hostname),0,(struct sockaddr*)&client2,size);
 recvbytes=recvfrom(sockid2,ip2,sizeof(ip2),0,NULL,NULL);
-//printf("Hai");
 ip2[recvbytes]='\0';
 printf("\nIp from Authoritative is %s\n",ip2);
 close(sockid2);

@@ -1,9 +1,8 @@
-    #include <stdio.h>
-     #include <string.h>
+#include <stdio.h>
+#include <string.h>
      void main() {
     	int i,j,keylen,msglen;
     	char input[100], key[30],temp[30],quot[100],rem[30],key1[30];
-   
     	printf("Enter Data: ");
     	gets(input);
     	printf("Enter Key: ");
@@ -43,5 +42,4 @@
     	 printf("%c",input[i]);
     	for (i=0;i<keylen-1;i++)
     	 printf("%c",rem[i]);
-  
     }
